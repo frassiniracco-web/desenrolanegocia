@@ -1065,7 +1065,7 @@ function renderBancosSelecao() {
   BANCOS_DISPONIVEIS.forEach(function(nome) {
     var logoUrl = BANCO_LOGOS[nome];
     var logoHtml = logoUrl
-      ? '<img src="https://desenrola.space/'+logoUrl+'" alt="'+nome+'">'
+      ? '<img src="'+logoUrl+'" alt="'+nome+'">'
       : '<span style="font-weight:700;font-size:0.6rem;color:var(--texto-sec)">'+nome.slice(0,2).toUpperCase()+'</span>';
     html += '<div class="banco-check" data-banco="'+nome+'">';
     html += '<div class="banco-check-box"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>';
@@ -1502,7 +1502,7 @@ function renderDetalhes() {
 
   var logoUrl = BANCO_LOGOS[banco];
   $('detalhe-logo').innerHTML = logoUrl
-    ? '<img src="https://desenrola.space/'+logoUrl+'" alt="'+banco+'">'
+    ? '<img src="'+logoUrl+'" alt="'+banco+'">'
     : '<span>'+banco.slice(0,2)+'</span>';
   $('detalhe-banco').textContent = banco;
   $('detalhe-tipo').textContent = tipo;
